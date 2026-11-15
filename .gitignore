@@ -1,0 +1,51 @@
+# --- Секреты ---
+.env
+.env.*
+!.env.example
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+vendor/OpenMontage/.venv/
+
+# --- Node / Remotion ---
+node_modules/
+vendor/OpenMontage/remotion-composer/out/
+vendor/OpenMontage/remotion-composer/public/montage/
+
+# --- Артефакты монтажа ---
+projects/
+demo/*.mp3
+
+# --- Прочее ---
+.DS_Store
+Thumbs.db
+*.log
+
+# --- Окружения Python (любые имена) ---
+venv/
+env/
+ENV/
+.venv/
+*.pyc
+
+# --- Медиа: тяжёлые исходники и готовые ролики ---
+# demo\KVS.mp4 ~100 МБ — не влезает в лимит GitHub 100 МиБ на файл.
+demo/
+*.mp4
+*.mp3
+*.mov
+*.mkv
+
+# --- Результаты рендера Remotion ---
+vendor/OpenMontage/remotion-composer/out/
+vendor/OpenMontage/remotion-composer/public/montage/
+
+# --- Сторонние копии (vendor) ---
+# vendor\ — это вендорные копии OpenMontage и Remotion: ~2,2 ГБ, 40 000+ файлов
+# и два вложенных каталога .git (чужие клоны). В Git такое пушить нельзя:
+# GitHub не примет файл больше 100 МиБ, а вложенные .git превратятся в битые ссылки.
+# Папка восстанавливается отдельно — см. раздел README «Про папку vendor».
+vendor/
